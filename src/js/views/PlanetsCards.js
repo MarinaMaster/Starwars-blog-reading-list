@@ -1,11 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Characters = ({ contact }) => {
+export const Planets = ({ detail }) => {
   const navigate = useNavigate();
+
   const goToFullPage = () => {
-    navigate("/FullPage", { state: { data: contact, type: "character" } });
+    navigate("/FullPage", { state: { data: detail, type: "planet" } });
   };
+
   return (
     <div
       id="scrollspyHeading1"
@@ -16,21 +18,18 @@ export const Characters = ({ contact }) => {
         <img
           src="https://loremflickr.com/320/240/dog"
           className="w-100"
-          alt="random-picture1"
+          alt={detail.name}
           style={{ height: "auto" }}
         />
         <div className="col post-header" style={{ padding: "10px" }}>
           <h2 style={{ fontSize: "20px", marginBottom: "10px" }}>
-            {contact.name}
+            {detail.name}
           </h2>
           <p style={{ textAlign: "left", margin: "5px 0" }}>
-            Gender: {contact.gender}
+            Population: {detail.population}
           </p>
           <p style={{ textAlign: "left", margin: "5px 0" }}>
-            Hair Color: {contact.hair_color}
-          </p>
-          <p style={{ textAlign: "left", margin: "5px 0" }}>
-            Eye-Color: {contact.eye_color}
+            Terrain: {detail.terrain}
           </p>
 
           <div
@@ -38,9 +37,9 @@ export const Characters = ({ contact }) => {
             style={{ marginTop: "20px" }}
           >
             <button
+              onClick={goToFullPage}
               type="button"
               className="btn btn-outline-primary"
-              onClick={goToFullPage}
             >
               Learn more!
             </button>

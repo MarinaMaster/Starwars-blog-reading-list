@@ -1,3 +1,7 @@
+.navbar {
+    width: 100%;
+}
+
 .img-logo {
     width:150px;
     padding-left:50px;
@@ -6,4 +10,55 @@
 
 .dropdown-toggle{
     margin-right:50px;
+}
+.btn-group .dropdown-toggle {
+    /* You can adjust these styles as per your design */
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the dropdown button */
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px; /* Adjust the width as needed */
+    padding: 5px 0;
+    margin: 2px 0 0; /* Margin top should be small */
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    list-style: none;;
+    background-clip: padding-box;
+    background-color: #f8f9fa; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 0.25rem; /* Rounded corners */
+}
+.dropdown-item {
+    width: 100%; /* Ensure it uses the full width of the dropdown menu */
+    padding: 8px 20px; /* Adjust padding as needed */
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+.btn-group .dropdown-menu.show {
+    display: block;
 }
